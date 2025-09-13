@@ -33,7 +33,7 @@ python calculateur_massar.py
 3- Follow the on-screen instructions:
 ---
 - Enter your Massar username.
-  ![Massar Calculator Screenshot](images/screenshot.png)
+  ![Massar Calculator Screenshot](images/Capture d’écran 2025-09-13 162144.png)
 ---
 - Enter your password.
   ![Massar Calculator Screenshot](images/screenshot.png)
