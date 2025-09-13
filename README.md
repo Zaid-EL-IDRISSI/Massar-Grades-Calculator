@@ -85,3 +85,7 @@ The program will display each subject’s average and your overall average.
 - The script only works with valid student accounts on the Massar portal.
 - Make sure to input your credentials and coefficients correctly.
 
+---
+
+## License
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
