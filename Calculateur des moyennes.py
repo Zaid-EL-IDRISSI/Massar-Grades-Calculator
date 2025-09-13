@@ -142,6 +142,9 @@ for element in dict:
     print("Average :",Majeuré(fRtn(dict.get(element))))
 moyen_generale = Majeuré(moyen_generale / SomeCoefficient)
 print("Overall average :",moyen_generale)
+# Copyright (c) 2025 Zaid El Idrissi
+# Licensed under the MIT License. See LICENSE file for details.
+
 
 
 
