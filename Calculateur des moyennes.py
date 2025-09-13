@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup as Bfs
-print("Bonjour utilisateur, ce programme est fait par Zaid el idrissi.")
-print("Connexion en cours, veuillez patienter")
+print("Hello user, this program was made by Zaid El Idrissi.")
+print("Connecting, please wait.")
 def vergulfloat(InputNum):
     str(InputNum)
     if InputNum.find(",") != -1:
@@ -63,7 +63,7 @@ login_page = session.get(login_url,headers=headers)
 login_page_soup = Bfs(login_page.text, "html.parser")
 token = login_page_soup.find('input', {'name': '__RequestVerificationToken'}).get('value')
 if token is None:
-    print("Désolé, il n'y a pas de jeton (token) !")
+    print("Sorry, there is no (token) !")
     exit()
 payload_login = {"__RequestVerificationToken":token,
                  "UserName":input("Veuillez entrer votre nom d'utilisateur :"),
@@ -72,25 +72,25 @@ response_login = session.post(login_url_post,data=payload_login,headers=headers)
 response_login_soup = Bfs(response_login.text, "html.parser")
 chekking  = response_login_soup.find('h1',class_='welcomeUser')
 if chekking is not None and chekking.find('span').text == "Bonjour":
-    print(f"Connexion réussie :)\nBonjour {chekking.span.next_sibling.text}.")
+    print(f"Connection successful :)\nHello {chekking.span.next_sibling.text}.")
 else:
-    print("Connexion échouée :(\nVeuillez vérifier votre nom d'utilisateur et mot de passe !")
+    print("Connection failed :(\nPlease check your username and password !")
     exit()
-payload_GetBulletins = {"Annee":input("Veuillez entrer l'année de la saison :"),
-                        "IdSession":input("Veuillez choisir :\n1 : premier semestre.\n2 : second semestre.\n>>>")}
+payload_GetBulletins = {"Annee":input("Please enter the year of the season :"),
+                        "IdSession":input("Please choose :\n1 : first semester.\n2 : second semester.\n>>>")}
 
 response_Bulletins = session.get(url_GetBulletins,params=payload_GetBulletins,headers=headers)
 response_Bulletins_soup = Bfs(response_Bulletins.text, 'html.parser')
 cheking2 = response_Bulletins_soup.find_all('dd')
 if len(cheking2[1]) != 0 and payload_GetBulletins.get("IdSession") in ["1","2"]:
-    print("Les notes ont été obtenues :)")
+    print("The grades have been obtained :)")
     etb = cheking2[0].text
     lvl = cheking2[1].text
-    print(f"Votre établissement est :{etb}\nVotre niveau est :{lvl}")
+    print(f"Your institution is :{etb}\nYour level is :{lvl}")
 else:
-    print("Les informations saisies sont invalides :(\nVeuillez vérifier et réessayer !")
+    print("The entered information is invalid :(\nPlease check and try again !")
     exit()
-print("Calcul des notes...")
+print("Grade calculation...")
 soupe = response_Bulletins_soup.find("tbody").find_all("tr")
 dict = {}
 for tr in soupe:
@@ -136,12 +136,12 @@ for tr in soupe:
 moyen_generale = 0
 SomeCoefficient = 0
 for element in dict:
-    tmp = int(input(f"Entrez le coefficient >{element}< :"))
+    tmp = int(input(f"Enter the coefficient >{element}< :"))
     moyen_generale += Majeuré(fRtn(dict.get(element)))*tmp
     SomeCoefficient += tmp
-    print("Moyenne :",Majeuré(fRtn(dict.get(element))))
+    print("Average :",Majeuré(fRtn(dict.get(element))))
 moyen_generale = Majeuré(moyen_generale / SomeCoefficient)
-print("Moyenne générale :",moyen_generale)
+print("Overall average :",moyen_generale)
 
 
 
