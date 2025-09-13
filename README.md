@@ -57,7 +57,7 @@ The program will display each subject’s average and your overall average.
   ![Massar Calculator Screenshot](images/6.png)
 
 ---
-##📖 How it works
+## 📖 How it works
 - Logs into the **Massar** platform (Moroccan student portal).
 - Creates a session and sets the required **cookies**.
 - Requests the **authentication token (`__RequestVerificationToken`)** from the login page.
