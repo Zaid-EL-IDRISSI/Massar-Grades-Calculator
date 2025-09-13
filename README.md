@@ -16,15 +16,18 @@ This **Python** program allows students to automatically calculate their **overa
 
 ---
 
-## Prerequisites
+## ❗ Requirements
 Make sure you have the required Python libraries installed:
 
 ```bash
 pip install -r requirements.txt 
 ```
-## Usage
+---
+
+## 📜 Usage
 
 1- Download or clone this repository.
+
 2- Run the Python script:
 
 ```bash
@@ -51,7 +54,30 @@ python calculateur_massar.py
 ---
 The program will display each subject’s average and your overall average.
 
-  ![Massar Calculator Screenshot](images/screenshot.png)
+  ![Massar Calculator Screenshot](images/6.png)
+
+---
+##📖 How it works
+- Logs into the **Massar** platform (Moroccan student portal).
+- Creates a session and sets the required **cookies**.
+- Requests the **authentication token (`__RequestVerificationToken`)** from the login page.
+- Prompts the user to enter **username and password** for login.
+- Sends a **POST request** to log in and checks if login is successful.
+- If login succeeds, displays the student’s name; if it fails, the program exits.
+- Prompts the user to enter the **school year and semester**.
+- Retrieves the student’s **grades (bulletins)** from the site using a GET request.
+- Parses the HTML using **BeautifulSoup** to extract grades for each subject.
+- Uses helper functions to calculate averages accurately:
+  - Converts numbers with commas to floats (`vergulfloat`).
+  - Converts numbers to fractions (`m_fr`).
+  - Performs operations on fractions (`op_fr`).
+  - Converts fractions back to decimals (`fRtn`).
+  - Rounds numbers to a maximum of 5 digits (`Majeuré`).
+- Calculates each subject average considering continuous assessment, activities, and ratios (coefficients).
+- Prompts the user to enter **coefficients for each subject** to calculate the **overall average**.
+- Prints each subject’s average and the **overall average**.
+
+---
 
 ## Notes
 
