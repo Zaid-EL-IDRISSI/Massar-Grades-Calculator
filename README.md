@@ -1,18 +1,24 @@
-Description
+# Massar Grades Calculator
 
-This Python program allows students to automatically calculate their overall average from the grades available on Morocco’s Massar portal.
-It logs into the student account, fetches the report cards, and calculates both subject-wise averages and the general average.
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-Features
+## Description
+This **Python** program allows students to automatically calculate their **overall average** from the grades available on Morocco’s **Massar portal**. It logs into the student account, fetches the report cards, and calculates both **subject-wise averages** and the **general average**.
 
-● Secure login to the Massar portal.
+---
 
-● Automatic retrieval of student report cards.
+## Features
+- Secure login to the Massar portal  
+- Automatic retrieval of student report cards  
+- Calculates averages per subject, including activity scores and coefficients  
+- Calculates the overall general average  
 
-● Calculates averages per subject, including activity scores and coefficients.
+---
 
-● Calculates the overall general average.
-
-Prerequisites
-
+## Prerequisites
 Make sure you have the required Python libraries installed:
+
+```bash
+pip install -r requirements.txt
+
