@@ -20,5 +20,36 @@ This **Python** program allows students to automatically calculate their **overa
 Make sure you have the required Python libraries installed:
 
 ```bash
-pip install -r requirements.txt
+pip install -r requirements.txt 
+```
+## Usage
+
+1- Download or clone this repository.
+2- Run the Python script:
+
+```bash
+python calculateur_massar.py
+```
+3- Follow the on-screen instructions:
+---
+- Enter your Massar username.
+  ![Massar Calculator Screenshot](images/screenshot.png)
+---
+- Enter your password.
+  ![Massar Calculator Screenshot](images/screenshot.png)
+---
+- Enter the academic year and semester you want to check.
+  ![Massar Calculator Screenshot](images/screenshot.png)
+---
+- Enter the coefficients for each subject when prompted.
+  ![Massar Calculator Screenshot](images/screenshot.png)
+---
+The program will display each subject’s average and your overall average.
+  ![Massar Calculator Screenshot](images/screenshot.png)
+
+## Notes
+
+- Developed by Zaid el Idrissi.
+- The script only works with valid student accounts on the Massar portal.
+- Make sure to input your credentials and coefficients correctly.
 
