@@ -33,18 +33,24 @@ python calculateur_massar.py
 3- Follow the on-screen instructions:
 ---
 - Enter your Massar username.
-  ![Massar Calculator Screenshot](images/Capture d’écran 2025-09-13 162144.png)
+
+  ![Massar Calculator Screenshot](images/1.png)
 ---
 - Enter your password.
-  ![Massar Calculator Screenshot](images/screenshot.png)
+  
+  ![Massar Calculator Screenshot](images/2.png)
 ---
 - Enter the academic year and semester you want to check.
-  ![Massar Calculator Screenshot](images/screenshot.png)
+  
+  ![Massar Calculator Screenshot](images/3.png)
+  ![Massar Calculator Screenshot](images/4.png)
 ---
 - Enter the coefficients for each subject when prompted.
-  ![Massar Calculator Screenshot](images/screenshot.png)
+  
+  ![Massar Calculator Screenshot](images/5.png)
 ---
 The program will display each subject’s average and your overall average.
+
   ![Massar Calculator Screenshot](images/screenshot.png)
 
 ## Notes
